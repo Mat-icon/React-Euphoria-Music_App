@@ -4,20 +4,22 @@ import "./app.css";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 
-function Discover({ playSongs, songs }) {
+function Discover({ songs }) {
   const [currentSongSrc, setCurrentSongSrc] = useState(false);
 
   function handleSongClick(songSrc) {
-    const audio= document.querySelector('audio');
-      if(currentSongSrc === true){
-        audio.play()
+    if (songSrc === currentSongSrc) {
+      const audio = document.querySelector("audio");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
       }
-      else{
-        audio.pause()   
-      }
-      setCurrentSongSrc(!currentSongSrc, songSrc)
-
+    } else {
+      setCurrentSongSrc(songSrc);
+    }
   }
+
   return (
     <div className="discover">
       <div className="discover--container">
@@ -26,10 +28,10 @@ function Discover({ playSongs, songs }) {
           {songs.map((song, index) => (
             <SongCard
               song={song}
-              i={index}
               key={song.id}
-              handleSongClick = {() => handleSongClick(song.src)}
-              currentSongSrc ={currentSongSrc}
+              i={index}
+              handleSongClick={() => handleSongClick(song.src)}
+              currentSongSrc={currentSongSrc === song.src}
             />
           ))}
         </div>
@@ -39,11 +41,11 @@ function Discover({ playSongs, songs }) {
           <div className="all-flex">
             <div className="artist--flex">
               <div className="artist-img">
-                <img src={songs.coverart} alt="" />
+                <img src={songs[1].coverart} alt="" />
               </div>
               <div className="artistName">
-                <p>Eminem</p>
-                <p>Unaccommodating</p>
+                <p>{currentSongSrc.artistName}</p>
+                <p>{songs[1].songName}</p>
               </div>
             </div>
             <div className="player">
@@ -52,13 +54,36 @@ function Discover({ playSongs, songs }) {
                   <MdSkipPrevious size={20} color="white" />
                 </div>
                 <div className="player--pad">
-                  { currentSongSrc ? (
-                    <BsFillPlayFill color="white" size={30}  onClick={() => handleSongClick(songs.src)}/>
+                  {currentSongSrc ? (
+                    <BsFillPlayFill
+                      color="white"
+                      size={30}
+                      onClick={() => {
+                        const audio = document.querySelector("audio");
+                        if (audio.paused) {
+                          audio.play();
+                        } else {
+                          audio.pause();
+                        }
+                      }}
+                    />
                   ) : (
-                    <BsFillPauseFill size={30} color="white" onClick={() => handleSongClick(songs.src)}/>
+                    <BsFillPauseFill
+                      size={30}
+                      color="white"
+                      onClick={() => {
+                        const audio = document.querySelector(
+                          `audio[src="${currentSongSrc}"]`
+                        );
+                        if (audio.paused) {
+                          audio.play();
+                        } else {
+                          audio.pause();
+                        }
+                      }}
+                    />
                   )}
                 </div>
-
                 <div className="player--pad">
                   <MdSkipNext color="white" size={20} />
                 </div>
@@ -71,4 +96,5 @@ function Discover({ playSongs, songs }) {
   );
 }
 
-export default Discover;
+
+export default Discover
