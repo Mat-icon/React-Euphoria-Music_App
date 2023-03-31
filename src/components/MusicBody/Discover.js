@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 import SongCard from "../SongCard/SongCard";
 import "./app.css";
-import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
-import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-function Discover({ songs }) {
-  const [currentSongSrc, setCurrentSongSrc] = useState(false);
+function Discover({ songs, darkMode, handleMode }) {
+  const [currentSongSrc, setCurrentSongSrc] = useState(null);
 
-  function handleSongClick(songSrc) {
-    if (songSrc === currentSongSrc) {
-      const audio = document.querySelector("audio");
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
+  const handleSongClick = (src) => {
+    if (currentSongSrc === src) {
+      setCurrentSongSrc(null);
     } else {
-      setCurrentSongSrc(songSrc);
+      setCurrentSongSrc(src);
     }
-  }
+  };
 
   return (
-    <div className="discover">
+    <div className={darkMode ? 'discover--light' : 'discover'}>
+       {darkMode ? (
+          <MdDarkMode size={20} color="white" className="mode" onClick={handleMode}/>
+        ) : (
+          <MdLightMode size={20} color="white" className="mode" onClick={handleMode}/>
+        )}
       <div className="discover--container">
-        <h2 className="discover--text">Discover</h2>
+        <h2 className={darkMode ? 'discover-light-text' : 'discover--text'}>Discover</h2>
         <div className="discover--grid">
           {songs.map((song, index) => (
             <SongCard
@@ -32,69 +31,13 @@ function Discover({ songs }) {
               i={index}
               handleSongClick={() => handleSongClick(song.src)}
               currentSongSrc={currentSongSrc === song.src}
+              darkMode ={darkMode}
             />
           ))}
         </div>
       </div>
-      {currentSongSrc && (
-        <div className="controls">
-          <div className="all-flex">
-            <div className="artist--flex">
-              <div className="artist-img">
-                <img src={songs[1].coverart} alt="" />
-              </div>
-              <div className="artistName">
-                <p>{currentSongSrc.artistName}</p>
-                <p>{songs[1].songName}</p>
-              </div>
-            </div>
-            <div className="player">
-              <div className="player--flex">
-                <div className="player--pad">
-                  <MdSkipPrevious size={20} color="white" />
-                </div>
-                <div className="player--pad">
-                  {currentSongSrc ? (
-                    <BsFillPlayFill
-                      color="white"
-                      size={30}
-                      onClick={() => {
-                        const audio = document.querySelector("audio");
-                        if (audio.paused) {
-                          audio.play();
-                        } else {
-                          audio.pause();
-                        }
-                      }}
-                    />
-                  ) : (
-                    <BsFillPauseFill
-                      size={30}
-                      color="white"
-                      onClick={() => {
-                        const audio = document.querySelector(
-                          `audio[src="${currentSongSrc}"]`
-                        );
-                        if (audio.paused) {
-                          audio.play();
-                        } else {
-                          audio.pause();
-                        }
-                      }}
-                    />
-                  )}
-                </div>
-                <div className="player--pad">
-                  <MdSkipNext color="white" size={20} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
-
-export default Discover
+export default Discover;

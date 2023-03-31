@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./app.css";
 import { MdPauseCircleFilled, MdPlayCircleFilled } from "react-icons/md";
+import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
+import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 
-
-function SongCard({ song, currentSongSrc, handleSongClick }) {
+function SongCard({ song, currentSongSrc, handleSongClick, darkMode}) {
   useEffect(() => {
     const audio = document.querySelector(`audio[src="${song.src}"]`);
     if (audio) {
@@ -18,7 +19,7 @@ function SongCard({ song, currentSongSrc, handleSongClick }) {
   return (
     <>
       <div className="card">
-        <div className="card--container">
+        <div className={darkMode ? 'card--container--light' : 'card--container'}>
           <div className="card--image">
             <img src={song.coverart} alt="artist" />
           </div>
@@ -27,22 +28,79 @@ function SongCard({ song, currentSongSrc, handleSongClick }) {
             <p className="subtitle">{song.songName}</p>
           </div>
           {currentSongSrc ? (
-            <MdPlayCircleFilled
-              size={35}
-              className="play"
-              onClick={() => handleSongClick(song.src)}
-            />
-          ) : (
             <MdPauseCircleFilled
               size={35}
               className="play"
               onClick={() => handleSongClick(song.src)}
             />
+          ) : (
+            <MdPlayCircleFilled
+            size={35}
+            className="play"
+            onClick={() => handleSongClick(song.src)}
+          />
           )}
         </div>
 
         <audio src={song.src} />
       </div>
+
+      {currentSongSrc && (
+        <div className={darkMode ? 'controls--light': 'controls'}>
+          <div className="all-flex">
+            <div className="artist--flex">
+              <div className="artist-img">
+                <img src={song.coverart} alt="" />
+              </div>
+              <div className="artistName">
+                <p>{song.artistName}</p>
+                <p className="subtitle">{song.songName}</p>
+              </div>
+            </div>
+            <div className="player">
+              <div className="player--flex">
+                <div className="player--pad">
+                  <MdSkipPrevious size={15} color="white" />
+                </div>
+                <div className="player--pad">
+                  {currentSongSrc ? (
+                    <BsFillPlayFill
+                      color="white"
+                      size={25}
+                      onClick={() => {
+                        const audio = document.querySelector("audio");
+                        if (audio.paused) {
+                          audio.play();
+                        } else {
+                          audio.pause();
+                        }
+                      }}
+                    />
+                  ) : (
+                    <BsFillPauseFill
+                      size={25}
+                      color="white"
+                      onClick={() => {
+                        const audio = document.querySelector(
+                          `audio[src="${currentSongSrc}"]`
+                        );
+                        if (audio.paused) {
+                          audio.play(song.src);
+                        } else {
+                          audio.pause(song.src);
+                        }
+                      }}
+                    />
+                  )}
+                </div>
+                <div className="player--pad">
+                  <MdSkipNext color="white" size={15} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

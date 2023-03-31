@@ -6,7 +6,11 @@ import songs from './components/Musicdata'
 
 function App() {
   const [played, setPlayed] = useState(false);
- 
+  const [darkMode, setDarkMode] = useState(false);
+
+  function handleMode() {
+    setDarkMode(!darkMode)
+  }
 
   function playSongs(songSrc) {
     const audio = document.querySelector('audio');
@@ -27,8 +31,8 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar/>
-      <Discover playSongs={playSongs} songs={songs}/>
+      <Navbar darkMode= {darkMode}/>
+      <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode}/>
     </div>
   );
 }

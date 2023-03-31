@@ -3,9 +3,9 @@ import "./app.css";
 import { MdHome, MdContactPage, MdHeadphones } from "react-icons/md";
 import { BsMusicPlayer } from "react-icons/bs";
 
-function Navbar() {
+function Navbar({darkMode}) {
   return (
-    <div className="nav">
+    <div className={darkMode ? 'nav--light' : 'nav'}>
       <div className="nav--title">Euphoria</div>
       <div className="nav--position">
         <div className="nav--links">

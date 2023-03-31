@@ -1,11 +1,12 @@
-import one from '../assets/1.jpg'
+import one from '../assets/1.png'
 import two from '../assets/linkin park.jpg'
 import three from '../assets/3.jpg'
-import four from '../assets/4.webp'
+import four from '../assets/4.jpg'
 import five from '../assets/5.jpg'
 import six from '../assets/7.jpg'
 import seven from '../assets/8.jpg'
 import eight from '../assets/9.jpg'
+import nine from '../assets/10.jpg'
 import audio1 from '../assets/audio/audio1.mp4'
 import audio2 from '../assets/audio/audio2.mp4'
 import audio3 from '../assets/audio/audio3.mp4'
@@ -14,6 +15,7 @@ import audio5 from '../assets/audio/audio5.mp4'
 import audio6 from '../assets/audio/audio6.mp3'
 import audio7 from '../assets/audio/audio7.mp3'
 import audio8 from '../assets/audio/audio8.mp4'
+import audio9 from '../assets/audio/audio9.mp4'
 
 const data =[
     {
@@ -40,8 +42,8 @@ const data =[
     {
         id :4,
         artistName : 'Linkin Park',
-        src : audio4,
-       coverart:two,
+        src : audio6,
+        coverart:two,
         songName : 'Lost'
     },
     {
@@ -54,7 +56,7 @@ const data =[
     {
         id :6,
         artistName :'Lil Wayne',
-        src : audio6,
+        src : audio9,
          coverart: four,
         songName : 'Mr Carter'
     },
@@ -71,6 +73,13 @@ const data =[
         src : audio8,
        coverart: six,
         songName : 'Count me Out'
+    },
+    {
+        id :9,
+        artistName : 'Dr Dre ft Snoop Dogg',
+        src : audio4,
+        coverart:nine,
+        songName : 'ETA'
     }
 ]
 
