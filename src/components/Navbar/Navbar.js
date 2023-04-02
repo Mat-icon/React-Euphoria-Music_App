@@ -3,8 +3,10 @@ import "./app.css";
 import { MdHome, MdContactPage, MdHeadphones } from "react-icons/md";
 import { BsMusicPlayer } from "react-icons/bs";
 
-function Navbar({darkMode}) {
+function Navbar({darkMode, showNav}) {
   return (
+    <>
+    {showNav && (
     <div className={darkMode ? 'nav--light' : 'nav'}>
       <div className="nav--title">Euphoria</div>
       <div className="nav--position">
@@ -27,6 +29,9 @@ function Navbar({darkMode}) {
       </div>
       <div className="social--link"></div>
     </div>
+    )
+    }
+    </>
   );
 }
 

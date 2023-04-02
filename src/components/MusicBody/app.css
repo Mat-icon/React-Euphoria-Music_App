@@ -1,56 +1,90 @@
-.discover{
-    width: 100%;
-    height: 100vh;
-    background: rgb(0, 0, 0);
-    overflow-y: scroll;
-    overflow-x: hidden;
+.discover {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.discover--light{
-    width: 100%;
-    height: 100vh;
-    background: whitesmoke;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.discover--light {
+  width: 100%;
+  height: 100vh;
+  background: rgba(210, 213, 213, 0.719);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-
-.discover--text{
-    color: #fff;
-    font-weight: 300;
-    font-family: sans-serif;
-    padding-left: 10px;
-    border-left: 2px solid  rgb(216, 55, 82);
+.discover--text {
+  color: #fff;
+  font-weight: 300;
+  font-family: sans-serif;
+  padding-left: 10px;
+  border-left: 2px solid rgb(216, 55, 82);
 }
-.discover-light-text{
-    color: #000;
-    font-weight: 300;
-    font-family: sans-serif;
-    padding-left: 10px;
-    border-left: 2px solid  rgb(216, 55, 82);
-}
-
-.discover--container{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 50px;
-    height: 100%;
-    
+.discover-light-text {
+  color: #000;
+  font-weight: 300;
+  font-family: sans-serif;
+  padding-left: 10px;
+  border-left: 2px solid rgb(216, 55, 82);
 }
 
-.discover--grid{
-    width: 70%;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 12px;
+.discover--container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 50px;
+  height: 100%;
 }
 
-.mode{
-    position: absolute;
-    right: 3%;
-    top: 2%;
-    padding: 5px 5px;
-    border-radius: 50%;
-    background: linear-gradient(rgb(196, 22, 123),rgb(216, 55, 82));
-    cursor: pointer;
+.discover--grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 12px;
 }
+
+.mode {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  padding: 5px 5px;
+  border-radius: 50%;
+  background: linear-gradient(rgb(196, 22, 123), rgb(216, 55, 82));
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  right: 7%;
+  top: 2%;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  transform: rotate(122deg);
+  border: 2px solid rgb(216, 55, 82);
+  cursor: pointer;
+  animation: mode infinite 4s ease-in-out;
+}
+
+.menu:hover {
+  background: linear-gradient(rgba(196, 22, 124, 0.548), rgba(216, 55, 82, 0.596));
+}
+
+@keyframes mode {
+    0% {
+      transform: scale(1.1);
+    }
+    25% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+

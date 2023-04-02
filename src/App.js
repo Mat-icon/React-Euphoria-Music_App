@@ -7,9 +7,14 @@ import songs from './components/Musicdata'
 function App() {
   const [played, setPlayed] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [showNav, setShowNav] = useState(false)
 
   function handleMode() {
     setDarkMode(!darkMode)
+  }
+
+  function handleNav(){
+    setShowNav(!showNav)
   }
 
   function playSongs(songSrc) {
@@ -31,8 +36,8 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar darkMode= {darkMode}/>
-      <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode}/>
+      <Navbar darkMode= {darkMode} showNav ={showNav}/>
+      <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/>
     </div>
   );
 }

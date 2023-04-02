@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.css";
 import { MdPauseCircleFilled, MdPlayCircleFilled } from "react-icons/md";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
@@ -16,6 +16,71 @@ function SongCard({ song, currentSongSrc, handleSongClick, darkMode}) {
     }
   }, [currentSongSrc, song.src]);
 
+
+  const Player = () => (
+    <>
+    {currentSongSrc && (
+      <div className="controls--body">
+      <div className={darkMode ? 'controls--light': 'controls'}>
+        <div className="all-flex">
+          <div className="artist--flex">
+            <div className="artist-img">
+              <img src={song.coverart} alt="" />
+            </div>
+            <div className="artistName">
+              <p>{song.artistName}</p>
+              <p className="subtitle">{song.songName}</p>
+            </div>
+          </div>
+          <div className="player">
+            <div className="player--flex">
+              <div className="player--pad">
+                <MdSkipPrevious size={12} color="white" />
+              </div>
+              <div className="player--pad">
+                {currentSongSrc ? (
+                  <BsFillPlayFill
+                    color="white"
+                    size={25}
+                    onClick={() => {
+                      const audio = document.querySelector("audio");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  />
+                ) : (
+                  <BsFillPauseFill
+                    size={25}
+                    color="white"
+                    onClick={() => {
+                      const audio = document.querySelector(
+                        `audio[src="${currentSongSrc}"]`
+                      );
+                      if (audio.paused) {
+                        audio.play(currentSongSrc);
+                      } else {
+                        audio.pause(currentSongSrc);
+                      }
+                    }}
+                  />
+                )}
+              </div>
+              <div className="player--pad">
+                <MdSkipNext color="white" size={12} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    )}
+    </>
+  )
+
+  
   return (
     <>
       <div className="card">
@@ -41,66 +106,8 @@ function SongCard({ song, currentSongSrc, handleSongClick, darkMode}) {
           />
           )}
         </div>
-
         <audio src={song.src} />
       </div>
-
-      {currentSongSrc && (
-        <div className={darkMode ? 'controls--light': 'controls'}>
-          <div className="all-flex">
-            <div className="artist--flex">
-              <div className="artist-img">
-                <img src={song.coverart} alt="" />
-              </div>
-              <div className="artistName">
-                <p>{song.artistName}</p>
-                <p className="subtitle">{song.songName}</p>
-              </div>
-            </div>
-            <div className="player">
-              <div className="player--flex">
-                <div className="player--pad">
-                  <MdSkipPrevious size={15} color="white" />
-                </div>
-                <div className="player--pad">
-                  {currentSongSrc ? (
-                    <BsFillPlayFill
-                      color="white"
-                      size={25}
-                      onClick={() => {
-                        const audio = document.querySelector("audio");
-                        if (audio.paused) {
-                          audio.play();
-                        } else {
-                          audio.pause();
-                        }
-                      }}
-                    />
-                  ) : (
-                    <BsFillPauseFill
-                      size={25}
-                      color="white"
-                      onClick={() => {
-                        const audio = document.querySelector(
-                          `audio[src="${currentSongSrc}"]`
-                        );
-                        if (audio.paused) {
-                          audio.play(song.src);
-                        } else {
-                          audio.pause(song.src);
-                        }
-                      }}
-                    />
-                  )}
-                </div>
-                <div className="player--pad">
-                  <MdSkipNext color="white" size={15} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

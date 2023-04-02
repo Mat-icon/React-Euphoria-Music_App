@@ -3,7 +3,7 @@ import SongCard from "../SongCard/SongCard";
 import "./app.css";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-function Discover({ songs, darkMode, handleMode }) {
+function Discover({ songs, darkMode, handleMode, handleNav }) {
   const [currentSongSrc, setCurrentSongSrc] = useState(null);
 
   const handleSongClick = (src) => {
@@ -21,6 +21,7 @@ function Discover({ songs, darkMode, handleMode }) {
         ) : (
           <MdLightMode size={20} color="white" className="mode" onClick={handleMode}/>
         )}
+        <div className="menu" onClick={handleNav}></div>
       <div className="discover--container">
         <h2 className={darkMode ? 'discover-light-text' : 'discover--text'}>Discover</h2>
         <div className="discover--grid">
