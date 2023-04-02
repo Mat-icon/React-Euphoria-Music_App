@@ -2,8 +2,10 @@ import React from "react";
 import "./app.css";
 import { MdHome, MdContactPage, MdHeadphones } from "react-icons/md";
 import { BsMusicPlayer } from "react-icons/bs";
+import 'animate.css'
 
 function Navbar({darkMode, showNav}) {
+
   return (
     <>
     {showNav && (

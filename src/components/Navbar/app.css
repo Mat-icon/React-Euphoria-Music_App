@@ -3,6 +3,7 @@
     height: 100vh;
     background: rgb(17, 17, 19);
     overflow: hidden;
+    animation: fadeInLeft  1s 1s backwards;
 }
 
 .nav--light{

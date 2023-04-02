@@ -1,7 +1,7 @@
 import './App.css';
 import Discover from './components/MusicBody/Discover';
 import Navbar from './components/Navbar/Navbar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import songs from './components/Musicdata'
 
 function App() {
@@ -31,9 +31,8 @@ function App() {
     setPlayed(!played);
   }
 
+  
 
-  
-  
   return (
     <div className="App">
       <Navbar darkMode= {darkMode} showNav ={showNav}/>
