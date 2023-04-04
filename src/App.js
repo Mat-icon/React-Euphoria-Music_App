@@ -3,6 +3,7 @@ import Discover from './components/MusicBody/Discover';
 import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
 import songs from './components/Musicdata'
+import Hero from './components/HeroPage/Hero';
 
 function App() {
   const [played, setPlayed] = useState(false);
@@ -35,8 +36,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar darkMode= {darkMode} showNav ={showNav}/>
-      <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/>
+      {/* <Navbar darkMode= {darkMode} showNav ={showNav}/> */}
+      {/* <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/> */}
+      <Hero/>
     </div>
   );
 }
