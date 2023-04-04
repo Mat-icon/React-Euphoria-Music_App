@@ -1,26 +1,26 @@
-import './App.css';
-import Discover from './components/MusicBody/Discover';
-import Navbar from './components/Navbar/Navbar';
-import { useState, useEffect } from 'react';
-import songs from './components/Musicdata'
-import Hero from './components/HeroPage/Hero';
-import { Routes, Route } from 'react-router-dom';
+import "./App.css";
+import Discover from "./components/MusicBody/Discover";
+import Navbar from "./components/Navbar/Navbar";
+import { useState, useEffect } from "react";
+import songs from "./components/Musicdata";
+import Hero from "./components/HeroPage/Hero";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const [played, setPlayed] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(false);
 
   function handleMode() {
-    setDarkMode(!darkMode)
+    setDarkMode(!darkMode);
   }
 
-  function handleNav(){
-    setShowNav(!showNav)
+  function handleNav() {
+    setShowNav(!showNav);
   }
 
   function playSongs(songSrc) {
-    const audio = document.querySelector('audio');
+    const audio = document.querySelector("audio");
     if (audio.src === songSrc) {
       if (played) {
         audio.play();
@@ -28,21 +28,41 @@ function App() {
         audio.pause();
       }
     } else {
-      <div>loading</div>
+      <div>loading</div>;
     }
     setPlayed(!played);
   }
 
-  
-
   return (
-    <div className="App">
-      <Routes> 
-        <Navbar darkMode= {darkMode} showNav ={showNav}/>
-        <Route path='/' element ={<Hero/>}/>
-        <Route path='/discover' element ={<Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/>}/>
-      </Routes>
-    </div>
+    <>
+      <Navbar darkMode={darkMode} showNav={showNav} />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Hero
+                handleMode={handleMode}
+                darkMode={darkMode}
+                handleNav={handleNav}
+              />
+            }
+          />
+          <Route
+            path="/discover"
+            element={
+              <Discover
+                playSongs={playSongs}
+                songs={songs}
+                handleMode={handleMode}
+                darkMode={darkMode}
+                handleNav={handleNav}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

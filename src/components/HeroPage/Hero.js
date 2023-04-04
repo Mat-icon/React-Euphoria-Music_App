@@ -3,17 +3,23 @@ import "./app.css";
 import headphones from "../../assets/headphones.png";
 import background from "../../assets/background.png";
 import 'animate.css'
-import { MdArrowCircleRight, MdPlayCircleFilled } from "react-icons/md";
+import { MdArrowCircleRight, MdPlayCircleFilled,MdDarkMode,MdLightMode } from "react-icons/md";
 
-function Hero() {
+function Hero({darkMode, handleMode,handleNav}) {
   return (
-    <div className="hero-body">
+    <div className={darkMode ? 'hero-body' : 'hero-body-dark'}>
+       {darkMode ? (
+          <MdDarkMode size={20} color="white" className="mode" onClick={handleMode}/>
+        ) : (
+          <MdLightMode size={20} color="white" className="mode" onClick={handleMode}/>
+        )}
+        <div className="menu" onClick={handleNav}></div>
       <div className="body--img">
         {" "}
         <img src={background} alt=""  className="background"/>
-        <div className="hero--text">
-          <h1>Euphoria Feel<br/><span className="span">in every song.</span></h1>
-          <a href="e" className="music">Listen Now <MdArrowCircleRight size={30}/></a>
+        <div className={darkMode ? 'hero--text' : 'hero-text-dark'}>
+          <h1>Euphoria Feel<br/><span className={darkMode ? 'span' : 'span-dark'}>in every song.</span></h1>
+          <a href="/discover" className={darkMode ? 'music' : 'music-dark'}>Listen Now <MdArrowCircleRight size={30}/></a>
         </div>
         <div className="hero--img">
           <img src={headphones} alt="" className="headphones" />

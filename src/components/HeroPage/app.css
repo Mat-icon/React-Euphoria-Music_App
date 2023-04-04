@@ -1,83 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 
-.hero-body{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right,rgb(231, 230, 230),rgb(209, 205, 205));
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
-}
-
-.body--img{
-    width: 100%;
-    height: 100%;
-}
-.body--img .background{
-    width: 18%;
-    height: 100%;
+.hero-body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(231, 230, 230), rgb(209, 205, 205));
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
-.hero--text{
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    transform: translate(-50%,-50%);
-    color: #202020;
-    font-weight: 900;
-    
-}
-h1{
-    animation: slideInLeft 1s backwards;
+.hero-body-dark {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
-.span{
-    -webkit-text-stroke: 2px rgb(51, 50, 50);
-    color: whitesmoke;
+.body--img {
+  width: 100%;
+  height: 100%;
 }
-.hero--img{
-    position: absolute;
-    top: 60%;
-    left: 70%;
-    transform: translate(-50%,-50%);
+.body--img .background {
+  width: 18%;
+  height: 100%;
 }
 
-.headphones{
-    width: 650px;
-    height: 500px;
-    animation: pulse 10s infinite;
+.hero--text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  transform: translate(-50%, -50%);
+  color: #202020;
+  font-weight: 900;
 }
 
-.music{
-    padding: 6px 20px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.733);
-    border-bottom: 2px solid black;
-    font-family: sans-serif;
-    font-weight: bold;
-    display: inline-flex;
-    letter-spacing: 1px;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    animation: fadeInUp 1s;
-    
+.hero-text-dark {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-weight: 900;
 }
-.music:hover{
+h1 {
+  animation: slideInLeft 1s backwards;
+}
+
+.span {
+  -webkit-text-stroke: 2px rgb(51, 50, 50);
+  color: whitesmoke;
+}
+
+.span-dark {
+  -webkit-text-stroke: 2px rgb(219, 216, 216);
+  color: rgb(19, 19, 19);
+}
+.hero--img {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.headphones {
+  width: 600px;
+  height: 500px;
+  animation: pulse 10s infinite;
+}
+
+.music {
+  padding: 6px 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.733);
+  border-bottom: 2px solid black;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-flex;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  animation: fadeInUp 1s;
+}
+.music-dark {
+  padding: 6px 20px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.733);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-flex;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  animation: fadeInUp 1s;
+}
+.music:hover {
+  border-bottom: 3px solid rgb(248, 4, 65);
+  color: #000;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.music-dark:hover{
     border-bottom: 3px solid rgb(248, 4, 65);
-    color: #000;
+    color: #ffffff;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
 }
 
-.social{
-    width: 300px;
-    height: 40px;
-    background: linear-gradient(rgba(196, 22, 124, 0.849),rgba(216, 55, 82, 0.801));
-    position: absolute;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    top: 0;
-    left: 40%;
+.social {
+  width: 300px;
+  height: 40px;
+  background: linear-gradient(
+    rgba(196, 22, 124, 0.849),
+    rgba(216, 55, 82, 0.801)
+  );
+  position: absolute;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: 0;
+  left: 40%;
 }
