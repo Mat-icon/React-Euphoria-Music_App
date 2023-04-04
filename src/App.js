@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
 import songs from './components/Musicdata'
 import Hero from './components/HeroPage/Hero';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [played, setPlayed] = useState(false);
@@ -36,9 +37,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar darkMode= {darkMode} showNav ={showNav}/> */}
-      {/* <Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/> */}
-      <Hero/>
+      <Routes> 
+        <Navbar darkMode= {darkMode} showNav ={showNav}/>
+        <Route path='/' element ={<Hero/>}/>
+        <Route path='/discover' element ={<Discover playSongs={playSongs} songs={songs} handleMode={handleMode} darkMode={darkMode} handleNav={handleNav}/>}/>
+      </Routes>
     </div>
   );
 }

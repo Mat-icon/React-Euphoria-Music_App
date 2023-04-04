@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
 .hero-body{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right,whitesmoke,rgb(209, 205, 205));
+    background: linear-gradient(to right,rgb(231, 230, 230),rgb(209, 205, 205));
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .body--img{
@@ -19,11 +22,16 @@
     top: 50%;
     left: 20%;
     font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     transform: translate(-50%,-50%);
     color: #202020;
     font-weight: 900;
+    
 }
+h1{
+    animation: slideInLeft 1s backwards;
+}
+
 .span{
     -webkit-text-stroke: 2px rgb(51, 50, 50);
     color: whitesmoke;
@@ -38,6 +46,7 @@
 .headphones{
     width: 650px;
     height: 500px;
+    animation: pulse 10s infinite;
 }
 
 .music{
@@ -47,8 +56,13 @@
     border-bottom: 2px solid black;
     font-family: sans-serif;
     font-weight: bold;
+    display: inline-flex;
     letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
+    animation: fadeInUp 1s;
+    
 }
 .music:hover{
     border-bottom: 3px solid rgb(248, 4, 65);

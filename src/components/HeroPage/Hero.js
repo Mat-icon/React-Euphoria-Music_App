@@ -2,6 +2,8 @@ import React from "react";
 import "./app.css";
 import headphones from "../../assets/headphones.png";
 import background from "../../assets/background.png";
+import 'animate.css'
+import { MdArrowCircleRight, MdPlayCircleFilled } from "react-icons/md";
 
 function Hero() {
   return (
@@ -11,7 +13,7 @@ function Hero() {
         <img src={background} alt=""  className="background"/>
         <div className="hero--text">
           <h1>Euphoria Feel<br/><span className="span">in every song.</span></h1>
-          <a href="e" className="music">Listen Now</a>
+          <a href="e" className="music">Listen Now <MdArrowCircleRight size={30}/></a>
         </div>
         <div className="hero--img">
           <img src={headphones} alt="" className="headphones" />
