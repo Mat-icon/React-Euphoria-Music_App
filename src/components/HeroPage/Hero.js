@@ -3,7 +3,7 @@ import "./app.css";
 import headphones from "../../assets/headphones.png";
 import background from "../../assets/background.png";
 import 'animate.css'
-import { MdArrowCircleRight, MdPlayCircleFilled,MdDarkMode,MdLightMode } from "react-icons/md";
+import { MdArrowCircleRight,MdDarkMode,MdLightMode, MdOutlineFacebook } from "react-icons/md";
 
 function Hero({darkMode, handleMode,handleNav}) {
   return (
@@ -25,7 +25,11 @@ function Hero({darkMode, handleMode,handleNav}) {
           <img src={headphones} alt="" className="headphones" />
         </div>
       </div>
-      <div className="social"></div>
+      <div className="social">
+        <li><a href="r" ><MdOutlineFacebook  size={30} color={darkMode ? 'black' : 'gray'}/></a></li>
+        <li><a href="r"><MdOutlineFacebook size={30} color={darkMode ? 'black' : 'gray'}/></a></li>
+        <li><a href="r"><MdOutlineFacebook size={30} color={darkMode ? 'black' : 'gray'}/></a></li>
+      </div>
     </div>
   );
 }
