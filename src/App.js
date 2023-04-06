@@ -45,6 +45,7 @@ function App() {
                 handleMode={handleMode}
                 darkMode={darkMode}
                 handleNav={handleNav}
+                songs ={songs}
               />
             }
           />
