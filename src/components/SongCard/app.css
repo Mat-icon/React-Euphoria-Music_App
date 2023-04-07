@@ -32,7 +32,7 @@
     width: 70%;
     padding-left: 20px;
     color: white;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 13px;
   
 }
@@ -41,13 +41,14 @@
     width: 70%;
     padding-left: 20px;
     color: black;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 13px;
 }
 .cardname p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: "Roboto", sans-serif;
 }
 .subtitle{
     font-size: 11px;

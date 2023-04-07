@@ -17,14 +17,14 @@
 .discover--text {
   color: #fff;
   font-weight: 300;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   padding-left: 10px;
   border-left: 2px solid rgb(216, 55, 82);
 }
 .discover-light-text {
   color: #000;
   font-weight: 300;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   padding-left: 10px;
   border-left: 2px solid rgb(216, 55, 82);
 }

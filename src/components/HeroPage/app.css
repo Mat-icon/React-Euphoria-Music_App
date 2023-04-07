@@ -160,15 +160,36 @@ h1 {
   width: 100%;
   height: 105vh;
   font-family: "Roboto", sans-serif;
-  padding: 40px 40px;
+  padding: 40px 60px;
   background: linear-gradient(100deg,rgb(221, 219, 219),rgb(190, 177, 188));
   overflow: hidden;
-  border-bottom: 6px solid rgb(216, 55, 82);
+  border-bottom: 4px solid rgb(216, 55, 82);
 }
+
+.hero-body-two-dark{
+  width: 100%;
+  height: 105vh;
+  font-family: "Roboto", sans-serif;
+  padding: 40px 60px;
+  background: linear-gradient(100deg,rgb(0, 0, 0),rgb(172, 133, 165));
+  overflow: hidden;
+  border-bottom: 4px solid rgb(216, 55, 82);
+}
+
+
+
 
 .hero-title h1{
   font-weight: 500;
-  border-left: 2px solid rgb(248, 4, 65);
+  border-left: 2px solid rgb(250, 34, 88);
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.hero-title-dark h1{
+  font-weight: 500;
+  border-left: 2px solid rgb(250, 34, 88);
+  color: #fff;
   padding-left: 10px;
   font-size: 25px;
 }
@@ -181,9 +202,11 @@ h1 {
 
 .img-two{
   width: 500px;
+  background-size: cover;
   height: 300px;
   
 }
+
 .details h2{
   font-weight: 500;
 }
@@ -196,6 +219,20 @@ h1 {
   color: #333;
 }
 
+.details-dark h2{
+  font-weight: 500;
+  color: white;
+}
+.details-dark h4{
+  font-weight: 500;
+  color: white;
+}
+.details-dark p{
+  width: 60%;
+  font-size: 13px;
+  color: #bbb9b9;
+}
+
 .trend-flex{
   display: flex;
   align-items: center;
@@ -205,12 +242,22 @@ h1 {
   width: 300px;
   height: 55px;
   border-bottom: 1px solid silver;
-  padding: 8px 20px;
+  border-right:1px solid silver ;
+  border-top: 1px solid silver;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.trend-container:hover{
+  background: linear-gradient(rgba(196, 22, 124, 0.699),rgba(216, 55, 82, 0.678));
+  transform: translateX(20px);
+  transition: 0.5s ease;
 }
 
 .artist-img{
   border-radius: 50%;
-  border: 1px solid silver;
 }
 
 .artist-img{
@@ -222,7 +269,7 @@ h1 {
   font-size: 14px;
   font-weight: 400;
   overflow: hidden;
-  color: #000;
+  color: #000000af;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -243,6 +290,7 @@ h1 {
 .link-discover:hover{
   background: linear-gradient(rgb(196, 22, 123),rgb(216, 55, 82));
   color: rgb(255, 255, 255);
+  border: none;
 }
 
 .carousel{

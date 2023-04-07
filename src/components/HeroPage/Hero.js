@@ -6,7 +6,7 @@ import dark from "../../assets/dark.png";
 import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 import "animate.css";
-import ed from '../../assets/ed.jpg'
+import trend from '../Trenddata'
 import {
   MdArrowCircleRight,
   MdDarkMode,
@@ -16,7 +16,7 @@ import {
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-function Hero({ darkMode, handleMode, handleNav, songs}) {
+function Hero({ darkMode, handleMode, handleNav, songs }) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -37,7 +37,6 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
     },
   };
 
-  
   return (
     <>
       <div className={darkMode ? "hero-body" : "hero-body-dark"}>
@@ -107,64 +106,65 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
           </li>
         </div>
       </div>
-      <div className="hero-body-two">
+      <div className={darkMode ? 'hero-body-two' : 'hero-body-two-dark'}>
         <div className="body-img-two">
-          <div className="hero-title">
+          <div className={darkMode ? 'hero-title' : 'hero-title-dark'}>
             <h1>#Trending Artists</h1>
           </div>
           {songs.map((song) => (
             <div className="trend" key={song.id}>
               <div className="trend-container">
                 <div className="trend-flex">
-                  <h3 style={{ fontWeight: 500 }}>{song.id}</h3>
+                  <h3 style={{ fontWeight: 500}}>{song.id}</h3>
                   <img className="artist-img" src={song.coverart} alt="" />
-                  <p className="artistname">{song.artistName}</p>
+                  <p className="artistname" style={darkMode === false && {color : 'white'}}>{song.artistName}</p>
                 </div>
               </div>
             </div>
           ))}
-            <div className="hero-two-content" >
+          <div className="hero-two-content">
             <Carousel
-            className="carousel"
-      swipeable={true}
-      draggable={true}
-      showDots={false}
-      responsive={responsive}
-      ssr={true}
-      autoPlay={true}
-      infinite={true}
-      autoPlaySpeed={6000}
-      keyBoardControl={true}
-      customTransition="all .5 ease-in-out"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={['tablet', 'mobile']}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {songs.map((song) => (
-        <>
-        <div key={song.id}>
-          <img src={song.coverart} alt='' className="img-two" />
-        </div>
-            <div className="details">
-              <h2>{song.artistName}</h2>
-              <h4>Shape Of You</h4>
-              <p>
-                Listen and discover your favourite artist's albums, biography
-                and other interests of the artists. Shuffle and save your best
-                playlist
-              </p>
-              <Link to="/discover" className="link-discover">
-                Discover
-              </Link>
-            </div>
-            </>))}
-            
+              className="carousel"
+              swipeable={true}
+              draggable={true}
+              showDots={false}
+              responsive={responsive}
+              ssr={true}
+              autoPlay={true}
+              infinite={true}
+              autoPlaySpeed={6000}
+              keyBoardControl={true}
+              customTransition="all .5 ease-in-out"
+              transitionDuration={500}
+              containerClass="carousel-container"
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding-40-px"
+            >
+              {trend.map((song) => (
+                <>
+                  <div key={song.id}>
+                    <img src={song.coverart} alt="" className="img-two" />
+
+                    <div className={darkMode ? 'details' : 'details-dark'}>
+                      <h2>{song.name}</h2>
+                      <h4>{song.songname}</h4>
+                      <p>
+                        Listen and discover your favourite artist's albums,
+                        biography and other interests of the artists. Shuffle
+                        and save your best playlist
+                      </p>
+                      <Link to="/discover" className="link-discover">
+                        Discover
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              ))}
             </Carousel>
+
             <div className="hero-design"></div>
           </div>
-        
         </div>
       </div>
     </>
