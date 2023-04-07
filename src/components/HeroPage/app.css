@@ -158,11 +158,12 @@ h1 {
 
 .hero-body-two{
   width: 100%;
-  height: 90vh;
+  height: 105vh;
   font-family: "Roboto", sans-serif;
   padding: 40px 40px;
   background: linear-gradient(100deg,rgb(221, 219, 219),rgb(190, 177, 188));
   overflow: hidden;
+  border-bottom: 6px solid rgb(216, 55, 82);
 }
 
 .hero-title h1{
@@ -181,7 +182,7 @@ h1 {
 .img-two{
   width: 500px;
   height: 300px;
-  background: black;
+  
 }
 .details h2{
   font-weight: 500;
@@ -242,4 +243,10 @@ h1 {
 .link-discover:hover{
   background: linear-gradient(rgb(196, 22, 123),rgb(216, 55, 82));
   color: rgb(255, 255, 255);
+}
+
+.carousel{
+  width: 490px;
+  height: 600px;
+  padding: 12px 20px;
 }

@@ -6,6 +6,7 @@ import dark from "../../assets/dark.png";
 import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 import "animate.css";
+import ed from '../../assets/ed.jpg'
 import {
   MdArrowCircleRight,
   MdDarkMode,
@@ -24,7 +25,7 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -35,6 +36,8 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
       items: 1,
     },
   };
+
+  
   return (
     <>
       <div className={darkMode ? "hero-body" : "hero-body-dark"}>
@@ -74,7 +77,7 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
             </a>
           </div>
           <div className="hero--img">
-            <img src={darkMode ? headphones : <div></div>} alt="" className="headphones" />
+            <img src={headphones} alt="" className="headphones" />
           </div>
         </div>
         <div className={darkMode ? "social" : "social-dark"}>
@@ -120,30 +123,33 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
               </div>
             </div>
           ))}
-
-          {songs.map((song) => (
-            <div className="hero-two-content" key={song.id}>
+            <div className="hero-two-content" >
             <Carousel
-              responsive={responsive}
-              swipeable={false}
-              draggable={false}
-              showDots={true}
-              ssr={true} // means to render carousel on server-side.
-              infinite={true}
-              autoPlaySpeed={1000}
-              keyBoardControl={true}
-              customTransition="all .5"
-              transitionDuration={500}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-            >
-              <img className="img-two" src={song.coverart} alt=""/>
-            </Carousel>
+            className="carousel"
+      swipeable={true}
+      draggable={true}
+      showDots={false}
+      responsive={responsive}
+      ssr={true}
+      autoPlay={true}
+      infinite={true}
+      autoPlaySpeed={6000}
+      keyBoardControl={true}
+      customTransition="all .5 ease-in-out"
+      transitionDuration={500}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={['tablet', 'mobile']}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {songs.map((song) => (
+        <>
+        <div key={song.id}>
+          <img src={song.coverart} alt='' className="img-two" />
+        </div>
             <div className="details">
-              <h2>Eminem</h2>
-              <h4>Music To Be Murdered</h4>
+              <h2>{song.artistName}</h2>
+              <h4>Shape Of You</h4>
               <p>
                 Listen and discover your favourite artist's albums, biography
                 and other interests of the artists. Shuffle and save your best
@@ -153,8 +159,12 @@ function Hero({ darkMode, handleMode, handleNav, songs}) {
                 Discover
               </Link>
             </div>
+            </>))}
+            
+            </Carousel>
+            <div className="hero-design"></div>
           </div>
-          ))}
+        
         </div>
       </div>
     </>
