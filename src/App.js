@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import songs from "./components/Musicdata";
 import Hero from "./components/HeroPage/Hero";
-import Footer from "./components/Footer/Footer";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -64,7 +63,6 @@ function App() {
           />
         </Routes>
       </Router>
-      <Footer/>
     </>
   );
 }

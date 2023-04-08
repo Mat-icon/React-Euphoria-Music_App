@@ -11,7 +11,7 @@
 .hero-body-dark {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.712));
   overflow: hidden;
   font-family: "Roboto", sans-serif;
 }
@@ -70,6 +70,9 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+.hero--img-dark{
+  display: none;
+}
 .headphones {
   width: 600px;
   height: 500px;
@@ -171,7 +174,7 @@ h1 {
   height: 105vh;
   font-family: "Roboto", sans-serif;
   padding: 40px 60px;
-  background: linear-gradient(100deg,rgb(0, 0, 0),rgb(172, 133, 165));
+  background: linear-gradient(220deg,rgb(49, 1, 39),#290128);
   overflow: hidden;
   border-bottom: 4px solid rgb(216, 55, 82);
 }
@@ -249,13 +252,36 @@ h1 {
   border-radius: 30px;
   cursor: pointer;
 }
+.trend-container-dark{
+  width: 300px;
+  height: 55px;
+  border-bottom: 0.5px solid #b68d1f7a;
+  border-right:0.5px solid#b68d1f7a ;
+  border-top: 0.5px solid #b68d1f7a;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
 
 .trend-container:hover{
   background: linear-gradient(rgba(196, 22, 124, 0.699),rgba(216, 55, 82, 0.678));
   transform: translateX(20px);
   transition: 0.5s ease;
 }
+.trend-container-dark:hover{
+  background: linear-gradient(rgba(196, 22, 124, 0.699),rgba(216, 55, 82, 0.678));
+  transform: translateX(20px);
+  transition: 0.5s ease;
+  border: none;
+}
 
+.trend-id{
+  color: black;
+}
+.trend-id-dark{
+  color: white;
+}
 .artist-img{
   border-radius: 50%;
 }
@@ -273,6 +299,16 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.artistname-dark{
+  width: 60%;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  color: #fcfcfcdc;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .link-discover{
   padding: 14px 50px;
@@ -287,7 +323,20 @@ h1 {
   border-radius: 20px;
 }
 
-.link-discover:hover{
+.link-discover-dark{
+  padding: 14px 50px;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  top: 9px;
+  right: 9px;
+  border: 1px solid rgb(216, 55, 82);
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease-out;
+  border-radius: 20px;
+}
+
+.link-discover:hover, .link-discover-dark:hover{
   background: linear-gradient(rgb(196, 22, 123),rgb(216, 55, 82));
   color: rgb(255, 255, 255);
   border: none;

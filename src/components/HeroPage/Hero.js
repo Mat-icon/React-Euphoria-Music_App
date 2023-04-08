@@ -7,6 +7,7 @@ import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 import "animate.css";
 import trend from '../Trenddata'
+import Footer from '../Footer/Footer'
 import {
   MdArrowCircleRight,
   MdDarkMode,
@@ -75,7 +76,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
               Listen Now <MdArrowCircleRight size={30} />
             </a>
           </div>
-          <div className="hero--img">
+          <div className={darkMode ? "hero--img" : "hero--img-dark"}>
             <img src={headphones} alt="" className="headphones" />
           </div>
         </div>
@@ -113,11 +114,11 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
           </div>
           {songs.map((song) => (
             <div className="trend" key={song.id}>
-              <div className="trend-container">
+              <div className={darkMode ? 'trend-container' : 'trend-container-dark'}>
                 <div className="trend-flex">
-                  <h3 style={{ fontWeight: 500}}>{song.id}</h3>
+                  <h3 style={{ fontWeight: 400}} className={darkMode ? "trend-id" : "trend-id-dark"}>{song.id}</h3>
                   <img className="artist-img" src={song.coverart} alt="" />
-                  <p className="artistname" style={darkMode === false && {color : 'white'}}>{song.artistName}</p>
+                  <p className={darkMode ? "artistname" : "artistname-dark"}>{song.artistName}</p>
                 </div>
               </div>
             </div>
@@ -154,7 +155,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
                         biography and other interests of the artists. Shuffle
                         and save your best playlist
                       </p>
-                      <Link to="/discover" className="link-discover">
+                      <Link to="/discover" className={darkMode ? "link-discover" :  "link-discover-dark"} >
                         Discover
                       </Link>
                     </div>
@@ -166,7 +167,9 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
             <div className="hero-design"></div>
           </div>
         </div>
+        
       </div>
+      <Footer/>
     </>
   );
 }
