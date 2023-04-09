@@ -83,10 +83,10 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
         <div className={darkMode ? "social" : "social-dark"}>
           <li>
             <SocialIcon
-              url="https://spotify.com/jaketrent"
+              url="https://youtube.com/jaketrent"
               className="social-links"
               style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-              bgColor="lime"
+              bgColor="white"
             />
           </li>
           <li>
@@ -94,7 +94,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
               url="https://twitter.com/jaketrent"
               className="social-links"
               style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-              bgColor="dodgerblue"
+              bgColor="white"
             />
           </li>
           <li>
@@ -102,7 +102,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
               url="https://facebook.com/jaketrent"
               className="social-links"
               style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-              bgColor="darkblue"
+              bgColor="white"
             />
           </li>
         </div>
@@ -169,7 +169,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
         </div>
         
       </div>
-      <Footer/>
+      <Footer darkMode ={darkMode}/>
     </>
   );
 }

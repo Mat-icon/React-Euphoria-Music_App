@@ -124,7 +124,7 @@ h1 {
 .social {
   width: 30px;
   height: 200px;
-  background: ghostwhite;
+  background: rgb(33, 33, 34);
   position: absolute;
   bottom: 1%;
   right: 0%;
@@ -205,7 +205,6 @@ h1 {
 
 .img-two{
   width: 500px;
-  background-size: cover;
   height: 300px;
   
 }
