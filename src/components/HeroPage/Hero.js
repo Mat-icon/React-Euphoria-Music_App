@@ -6,8 +6,9 @@ import dark from "../../assets/dark.png";
 import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 import "animate.css";
-import trend from '../Trenddata'
-import Footer from '../Footer/Footer'
+import trend from "../Trenddata";
+import Footer from "../Footer/Footer";
+import artistData from "../artistdata";
 import {
   MdArrowCircleRight,
   MdDarkMode,
@@ -76,6 +77,9 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
               Listen Now <MdArrowCircleRight size={30} />
             </a>
           </div>
+          <div class="meteors">
+            <div class="meteor"></div>
+          </div>
           <div className={darkMode ? "hero--img" : "hero--img-dark"}>
             <img src={headphones} alt="" className="headphones" />
           </div>
@@ -107,18 +111,30 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
           </li>
         </div>
       </div>
-      <div className={darkMode ? 'hero-body-two' : 'hero-body-two-dark'}>
+      <div className={darkMode ? "hero-body-two" : "hero-body-two-dark"}>
         <div className="body-img-two">
-          <div className={darkMode ? 'hero-title' : 'hero-title-dark'}>
+          <div className={darkMode ? "hero-title" : "hero-title-dark"}>
             <h1>#Trending Artists</h1>
           </div>
-          {songs.map((song) => (
+          {artistData.map((song) => (
             <div className="trend" key={song.id}>
-              <div className={darkMode ? 'trend-container' : 'trend-container-dark'}>
+              <div
+                className={
+                  darkMode ? "trend-container" : "trend-container-dark"
+                }
+              >
                 <div className="trend-flex">
-                  <h3 style={{ fontWeight: 400}} className={darkMode ? "trend-id" : "trend-id-dark"}>{song.id}</h3>
+                  <h3
+                    style={{ fontWeight: 400 }}
+                    className={darkMode ? "trend-id" : "trend-id-dark"}
+                  >
+                    {song.id}
+                  </h3>
                   <img className="artist-img" src={song.coverart} alt="" />
-                  <p className={darkMode ? "artistname" : "artistname-dark"}>{song.artistName}</p>
+                  <p className={darkMode ? "artistname" : "artistname-dark"}>
+                    {song.artistName}
+                    <p className={darkMode ? "subtitle-light" : "subtitle"}>{song.subtitle}</p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -147,7 +163,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
                   <div key={song.id}>
                     <img src={song.coverart} alt="" className="img-two" />
 
-                    <div className={darkMode ? 'details' : 'details-dark'}>
+                    <div className={darkMode ? "details" : "details-dark"}>
                       <h2>{song.name}</h2>
                       <h4>{song.songname}</h4>
                       <p>
@@ -155,7 +171,12 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
                         biography and other interests of the artists. Shuffle
                         and save your best playlist
                       </p>
-                      <Link to="/discover" className={darkMode ? "link-discover" :  "link-discover-dark"} >
+                      <Link
+                        to="/discover"
+                        className={
+                          darkMode ? "link-discover" : "link-discover-dark"
+                        }
+                      >
                         Discover
                       </Link>
                     </div>
@@ -167,9 +188,8 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
             <div className="hero-design"></div>
           </div>
         </div>
-        
       </div>
-      <Footer darkMode ={darkMode}/>
+      <Footer darkMode={darkMode} />
     </>
   );
 }

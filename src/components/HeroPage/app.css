@@ -47,7 +47,7 @@
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: #ffffffce;
   font-weight: 900;
 }
 h1 {
@@ -80,10 +80,10 @@ h1 {
 }
 
 .music {
-  padding: 6px 20px;
+  padding: 12px 20px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.733);
-  border-bottom: 2px solid black;
+  border: 1px solid black;
   font-family: sans-serif;
   font-weight: bold;
   display: inline-flex;
@@ -92,14 +92,16 @@ h1 {
   justify-content: center;
   font-size: 16px;
   animation: fadeInUp 1s;
+  border-radius: 20px;
 }
 .music-dark {
-  padding: 6px 20px;
+  padding: 12px 20px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.733);
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   font-family: sans-serif;
   font-weight: bold;
+  border-radius: 20px;
   display: inline-flex;
   letter-spacing: 1px;
   align-items: center;
@@ -108,17 +110,14 @@ h1 {
   animation: fadeInUp 1s;
 }
 .music:hover {
-  border-bottom: 3px solid rgb(248, 4, 65);
   color: #000;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  background: linear-gradient(220deg,rgba(196, 22, 124, 0.979),rgba(216, 55, 82, 0.678),rgba(255, 217, 0, 0.479));
+  
 }
 
 .music-dark:hover{
-    border-bottom: 3px solid rgb(248, 4, 65);
     color: #ffffff;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    background: linear-gradient(220deg,rgb(196, 22, 124),rgba(216, 55, 82, 0.37),rgba(255, 217, 0, 0.788));
 }
 
 .social {
@@ -166,7 +165,7 @@ h1 {
   padding: 40px 60px;
   background: linear-gradient(100deg,rgb(221, 219, 219),rgb(190, 177, 188));
   overflow: hidden;
-  border-bottom: 4px solid rgb(216, 55, 82);
+  border-bottom: 2px solid rgb(216, 55, 82);
 }
 
 .hero-body-two-dark{
@@ -176,7 +175,7 @@ h1 {
   padding: 40px 60px;
   background: linear-gradient(220deg,rgb(49, 1, 39),#290128);
   overflow: hidden;
-  border-bottom: 4px solid rgb(216, 55, 82);
+  border-bottom: 2px solid rgb(216, 55, 82);
 }
 
 
@@ -200,13 +199,13 @@ h1 {
 .hero-two-content{
   position: absolute;
   top: 110%;
+  animation: slideInRight 2s backwards;
   left: 50%;
 }
 
 .img-two{
   width: 500px;
   height: 300px;
-  
 }
 
 .details h2{
@@ -239,7 +238,9 @@ h1 {
   display: flex;
   align-items: center;
 }
-
+.trend{
+  margin-top: 20px;
+}
 .trend-container{
   width: 300px;
   height: 55px;
@@ -250,10 +251,14 @@ h1 {
   margin-top: 10px;
   border-radius: 30px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .trend-container-dark{
   width: 300px;
   height: 55px;
+  display: flex;
+  align-items: center;
   border-bottom: 0.5px solid #b68d1f7a;
   border-right:0.5px solid#b68d1f7a ;
   border-top: 0.5px solid #b68d1f7a;
@@ -290,6 +295,7 @@ h1 {
 }
 .artistname{
   width: 60%;
+  margin-top: 30px;
   margin-left: 10px;
   font-size: 14px;
   font-weight: 400;
@@ -300,6 +306,7 @@ h1 {
 }
 .artistname-dark{
   width: 60%;
+  margin-top: 30px;
   margin-left: 10px;
   font-size: 14px;
   font-weight: 400;
@@ -308,7 +315,10 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+.subtitle-light{
+  color: #333;
+  font-size: 11px;
+}
 .link-discover{
   padding: 14px 50px;
   width: 50px;
@@ -345,4 +355,45 @@ h1 {
   width: 490px;
   height: 600px;
   padding: 12px 20px;
+}
+
+.meteor {
+  border: 2px solid transparent;
+  border-bottom: 60px solid #fff;
+  position: absolute;
+  transform-origin: top center;
+  opacity: 0;
+  position: absolute;
+  top: 5%;
+}
+.meteor:after {
+  content: '';
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
+  background: #fff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px 0 #fff;
+}
+.meteor:nth-child(2) {
+  left: 56vw;
+  top: 23vh;
+  animation-delay: 17s;
+}
+@keyframes shower {
+  0% {
+    transform: rotate(30deg) scaleY(0);
+    opacity: 0;
+  }
+  65% {
+    transform: rotate(30deg) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(30deg) scaleY(1) translateY(500%);
+    opacity: 0;
+  }
 }
