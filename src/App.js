@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import songs from "./components/Musicdata";
 import Hero from "./components/HeroPage/Hero";
+import Search from "./components/SearchPage/Search";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
               />
             }
           />
+          <Route path="/search" element={<Search/>} />
         </Routes>
       </Router>
     </>

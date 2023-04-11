@@ -14,6 +14,8 @@ import {
   MdDarkMode,
   MdLightMode,
   MdOutlineFacebook,
+  MdSearch,
+  MdSearchOff,
 } from "react-icons/md";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -76,9 +78,9 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
             <a href="/discover" className={darkMode ? "music" : "music-dark"}>
               Listen Now <MdArrowCircleRight size={30} />
             </a>
-          </div>
-          <div class="meteors">
-            <div class="meteor"></div>
+            <a href="/search" className={darkMode ? "music" : "music-dark"}>
+              Search for artist <MdSearch size={25} />
+            </a>
           </div>
           <div className={darkMode ? "hero--img" : "hero--img-dark"}>
             <img src={headphones} alt="" className="headphones" />

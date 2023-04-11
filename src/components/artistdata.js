@@ -1,7 +1,7 @@
 import one from '../assets/1.png'
 import two from '../assets/linkin park.jpg'
 import three from '../assets/3.jpg'
-import five from '../assets/5.jpg'
+import five from '../assets/10.jpg'
 import six from '../assets/7.jpg'
 import eight from '../assets/9.jpg'
 import audio1 from '../assets/audio/audio1.mp4'
@@ -25,7 +25,7 @@ const artistData =[
         artistName : 'Six Pence None The Richer',
         src : audio2,
          coverart: eight,
-        songName : "Kiss Me"
+        subtitle : "Kiss Me"
     },
     {
         id :3,
@@ -45,14 +45,12 @@ const artistData =[
     },
     {
         id :5,
-        artistName : 'Kanye West',
-        src :audio5 ,
+        artistName : 'Dr Dre',
         coverart:five,
-        songName :'Off The Grid',
-        subtitle : 'Donda(Chant)'
+        subtitle : 'Gospel'
     },
     {
-        id :8,
+        id :6,
         artistName : 'Kendrick Lamar',
         subtitle : 'Rich Spirit',
         src : audio8,
