@@ -9,6 +9,7 @@ import "animate.css";
 import trend from "../Trenddata";
 import Footer from "../Footer/Footer";
 import artistData from "../artistdata";
+import ImgGrid from "./ImgGrid/ImgGrid";
 import {
   MdArrowCircleRight,
   MdDarkMode,
@@ -191,6 +192,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
           </div>
         </div>
       </div>
+      <ImgGrid/>
       <Footer darkMode={darkMode} />
     </>
   );

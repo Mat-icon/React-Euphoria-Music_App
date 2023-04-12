@@ -1,0 +1,60 @@
+.img-grid-body {
+  width: 100%;
+  height: 80vh;
+}
+
+.img-grid {
+  width: 25%;
+  height: 100%;
+  background: red;
+  background-size: cover;
+  background-image: url('../../../assets/btsA.jpeg');
+}
+.img-grid2 {
+  width: 40%;
+  height: 100%;
+  background: rgb(44, 2, 2);
+  background-size: cover;
+  background-image: url('../../../assets/ed.jpg');
+}
+.img-grid3 {
+  width: 35%;
+  height: 100%;
+  background: rgb(0, 255, 255);
+  background-image: url('../../../assets/jcole.webp');
+  background-size: cover;
+}
+.img-grid4 {
+  width: 30%;
+  height: 100%;
+  background: rgb(208, 255, 0);
+  background-image: url('../../../assets/doja.jpg');
+  background-size: cover;
+}
+.img-grid5 {
+  width: 45%;
+  height: 100%;
+  background: rgb(0, 140, 255);
+  background-image: url('../../../assets/ari.jpg');
+  background-size: cover;
+}
+.img-grid6 {
+  width: 25%;
+  height: 100%;
+  background: rgb(13, 12, 14);
+  background-image: url('../../../assets/olivia-rodrigo.webp');
+  background-size: cover;
+}
+
+.img-grid-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+}
+.img-grid-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}

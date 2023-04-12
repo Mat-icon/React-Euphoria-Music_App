@@ -1,8 +1,16 @@
 .search-body{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: #333;
     padding-top: 20px;
+    overflow: hidden;
+}
+.search-body-light{
+    width: 100%;
+    height: auto;
+    background: rgb(235, 232, 232);
+    padding-top: 20px;
+    overflow: hidden;
 }
 
 .search-nav{
@@ -24,17 +32,44 @@
     display: flex;
     align-items: center;
 }
+.search-input-light{
+    display: flex;
+    align-items: center;
+}
 .search-input input{
     padding: 12px 30px;
     width: 300px;
     margin-left: 10px;
     border-radius: 12px;
     outline: none;
+    font-family: 'Roboto', sans-serif;
     border: none;
     background: #000;
     color: white;
     text-indent: 5px;
 }
+.search-input-light input{
+    padding: 12px 30px;
+    width: 300px;
+    margin-left: 10px;
+    border-radius: 12px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    background: #ffffff;
+    color: rgb(2, 2, 2);
+    text-indent: 5px;
+}
 .input-search{
     transform: translateX(-350px);
+}
+
+.artist-container{
+    width: 85%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 12px;
+    background: none;
+    margin: 70px auto;
 }

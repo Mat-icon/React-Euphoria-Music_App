@@ -62,7 +62,7 @@ function App() {
               />
             }
           />
-          <Route path="/search" element={<Search/>} />
+          <Route path="/search" element={<Search handleMode={handleMode} darkMode={darkMode}/>} />
         </Routes>
       </Router>
     </>
