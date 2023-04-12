@@ -207,7 +207,10 @@ h1 {
   width: 500px;
   height: 300px;
 }
-
+.img-two:hover{
+  filter: brightness(80%);
+  transition: 0.3s;
+}
 .details h2{
   font-weight: 500;
 }

@@ -6,23 +6,30 @@
 .img-grid {
   width: 25%;
   height: 100%;
-  background: red;
+  background: #e0093f;
   background-size: cover;
-  background-image: url('../../../assets/btsA.jpeg');
+  background-image: url('../../../assets/week.jpg');
+  background-position: center;
+  filter: brightness(30%);
+  border: 1px solid rgb(209, 3, 147);
 }
 .img-grid2 {
   width: 40%;
   height: 100%;
   background: rgb(44, 2, 2);
   background-size: cover;
+  border: 1px solid rgb(209, 3, 147);
   background-image: url('../../../assets/ed.jpg');
+  filter: brightness(30%);
 }
 .img-grid3 {
   width: 35%;
   height: 100%;
   background: rgb(0, 255, 255);
-  background-image: url('../../../assets/jcole.webp');
+  background-image: url('../../../assets/drake.webp');
   background-size: cover;
+  border: 1px solid rgb(209, 3, 147);
+  filter: brightness(30%);
 }
 .img-grid4 {
   width: 30%;
@@ -30,6 +37,8 @@
   background: rgb(208, 255, 0);
   background-image: url('../../../assets/doja.jpg');
   background-size: cover;
+  border: 1px solid rgb(209, 3, 147);
+  filter: brightness(30%);
 }
 .img-grid5 {
   width: 45%;
@@ -37,6 +46,8 @@
   background: rgb(0, 140, 255);
   background-image: url('../../../assets/ari.jpg');
   background-size: cover;
+  filter: brightness(30%);
+  border: 1px solid rgb(209, 3, 147);
 }
 .img-grid6 {
   width: 25%;
@@ -44,6 +55,8 @@
   background: rgb(13, 12, 14);
   background-image: url('../../../assets/olivia-rodrigo.webp');
   background-size: cover;
+  filter: brightness(30%);
+  border: 1px solid rgb(209, 3, 147);
 }
 
 .img-grid-flex {
@@ -57,4 +70,14 @@
     height: 100%;
     display: grid;
     grid-template-columns: auto;
+}
+.img-title{
+    position: absolute;
+    top: 255%;
+    left: 50%;
+    font-size: 30px;
+    color: white;
+    transform: translate(-50%,-50%);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }

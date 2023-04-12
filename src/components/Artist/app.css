@@ -4,6 +4,10 @@
     cursor: pointer;
     padding: 3px 6px;
 }
+.artist-card:hover{
+  filter: brightness(65%);
+  transition: 0.3s ease-in;
+}
 
 .artist-card-img{
     width: 150px;

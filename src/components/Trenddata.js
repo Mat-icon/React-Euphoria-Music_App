@@ -5,7 +5,7 @@ import tay from '../assets/dre.webp'
 import olivia from '../assets/olivia-rodrigo.webp'
 import bts from '../assets/btsA.jpeg'
 import doja from '../assets/doja.jpg'
-import ari from '../assets/ari.jpg'
+import ari from '../assets/lil durk.jpg'
 
 const trend = [
     {
@@ -54,9 +54,9 @@ const trend = [
       },
       {
         id : 8,
-         name: "Ariana Grande",
+         name: "Lil Durk",
          coverart: ari,
-         songname : 'Position'
+         songname : 'Internet Sensation'
       },
 
 ]

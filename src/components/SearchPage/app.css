@@ -4,6 +4,7 @@
     background: #333;
     padding-top: 20px;
     overflow: hidden;
+    min-height: 100vh;
 }
 .search-body-light{
     width: 100%;
@@ -11,6 +12,7 @@
     background: rgb(235, 232, 232);
     padding-top: 20px;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .search-nav{
@@ -40,19 +42,21 @@
     padding: 12px 30px;
     width: 300px;
     margin-left: 10px;
-    border-radius: 12px;
+    border-radius: 22px;
     outline: none;
     font-family: 'Roboto', sans-serif;
     border: none;
     background: #000;
     color: white;
+    font-size: 15px;
     text-indent: 5px;
 }
 .search-input-light input{
     padding: 12px 30px;
     width: 300px;
+    font-size: 15px;
     margin-left: 10px;
-    border-radius: 12px;
+    border-radius: 22px;
     outline: none;
     font-family: 'Roboto', sans-serif;
     border: none;
@@ -72,4 +76,26 @@
     gap: 12px;
     background: none;
     margin: 70px auto;
+}
+
+.no-results{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-weight: 300;
+    transform: translate(-50%,-50%);
+}
+
+.no-results-light{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-weight: 300;
+    transform: translate(-50%,-50%);
 }

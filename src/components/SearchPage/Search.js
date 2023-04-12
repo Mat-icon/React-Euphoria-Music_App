@@ -16,19 +16,12 @@ function Search({ darkMode, handleMode }) {
 
   const handleQueryChange = event => {
     setQuery(event.target.value);
-  };
-
-  const handleSearch = event => {
-    event.preventDefault(); // prevent the form from submitting and reloading the page
-
-    const filteredItems = items.filter(item => {
+    const filteredItems = searchData.filter(item => {
       const name = item.name.toLowerCase();
-      const queryLowerCase = query.toLowerCase();
+      const queryLowerCase = event.target.value.toLowerCase();
 
       return name.includes(queryLowerCase)
     });
-
-    // update the items state variable with the filtered items
     setItems(filteredItems);
   };
 
@@ -61,23 +54,25 @@ function Search({ darkMode, handleMode }) {
           className="search-arrow"
         />
         <div className={darkMode ? "search-input" : "search-input-light"}>
-          <form onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="Search for artist..."
               onChange={handleQueryChange}
               value={query}
+              
             />
-            {/* <MdSearch className="input-search" color="gray" size={20} /> */}
-            <button type="submit">Submit</button>
-          </form>
+            <MdSearch className="input-search" color="gray" size={20} />
         </div>
       </div>
-      <div className="artist-container">
-        {searchData.map((artist) => (
-          <ArtistData artist={artist} darkMode={darkMode} key={artist.id} />
-        ))}{" "}
-      </div>
+      {items.length > 0 ? (
+        <div className="artist-container">
+          {items.map((artist) => (
+            <ArtistData artist={artist} darkMode={darkMode} key={artist.id} />
+          ))}
+        </div>
+      ) : (
+        <p className={darkMode ? "no-results" : "no-results-light"}>No results found for "{query}"</p>
+      )}
     </div>
   );
 }

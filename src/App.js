@@ -6,6 +6,7 @@ import songs from "./components/Musicdata";
 import Hero from "./components/HeroPage/Hero";
 import Search from "./components/SearchPage/Search";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
 
 function App() {
   const [played, setPlayed] = useState(false);
@@ -63,6 +64,7 @@ function App() {
             }
           />
           <Route path="/search" element={<Search handleMode={handleMode} darkMode={darkMode}/>} />
+          <Route path="/artist" element={<ArtistDetails handleMode={handleMode} darkMode={darkMode}/>} />
         </Routes>
       </Router>
     </>

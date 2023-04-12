@@ -58,6 +58,9 @@ margin-left: 30px;
     padding-right: 50px;
     color: white;
 }
+.footer-title h2{
+    font-weight: 900;
+}
 .line{
     width: 60%;
     border-top:0.2px solid rgb(216, 55, 82);

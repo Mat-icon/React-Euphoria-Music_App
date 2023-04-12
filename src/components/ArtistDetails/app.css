@@ -1,0 +1,32 @@
+.artist-d-body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #333;
+}
+
+.artist-d-head {
+  width: 100%;
+  height: 50%;
+  background-image: url("../../assets/btsA.jpeg");
+  background-position: top;
+  filter: brightness(40%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.artist-d {
+  position: absolute;
+  left: 5%;
+  font-family: "Roboto", sans-serif;
+  top: 5%;
+}
+.artist-d-name {
+  font-size: 40px;
+  color: white;
+  filter: brightness(100%);
+}
+
+.arist-category h3 {
+  color: white;
+}
