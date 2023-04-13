@@ -31,7 +31,7 @@ function ImgGrid() {
         
         </div>
         <div className='img-title'>
-             <h1>Listen and Vibe To Your <span style={{fontWeight : 500, fontSize : '55px', color : '#e4043c'}}>Favourite Top Artist</span></h1>
+             <h1>Listen and Vibe To Your <span style={{fontWeight : 600, fontSize : '50px', color : '#e4043c'}}>Favourite Top Artist</span></h1>
         </div>
        
     </div>

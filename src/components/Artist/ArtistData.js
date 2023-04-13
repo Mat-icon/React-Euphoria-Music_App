@@ -2,7 +2,7 @@ import React from 'react'
 import './app.css'
 function ArtistData({artist, darkMode}) {
   return (
-    <div className='artist-card'>
+    <a href='/artist' className='artist-card'>
         <div className='artist-item-container'>
         <div >
             <img src={artist.cover_art} alt='' className='artist-card-img'/>
@@ -11,7 +11,7 @@ function ArtistData({artist, darkMode}) {
             <p>{artist.name}</p>
         </div>
         </div>
-    </div>
+    </a>
   )
 }
 

@@ -296,14 +296,14 @@ h1 {
 .artist-img{
   margin-left: 20px;
 }
-.artistname{
+.artistName{
   width: 60%;
   margin-top: 30px;
   margin-left: 10px;
   font-size: 14px;
   font-weight: 400;
   overflow: hidden;
-  color: #000000af;
+  color: #000000a4;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

@@ -134,7 +134,7 @@ function Hero({ darkMode, handleMode, handleNav, songs }) {
                     {song.id}
                   </h3>
                   <img className="artist-img" src={song.coverart} alt="" />
-                  <p className={darkMode ? "artistname" : "artistname-dark"}>
+                  <p className={darkMode ? "artistName" : "artistname-dark"}>
                     {song.artistName}
                     <p className={darkMode ? "subtitle-light" : "subtitle"}>{song.subtitle}</p>
                   </p>
