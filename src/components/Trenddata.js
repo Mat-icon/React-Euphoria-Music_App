@@ -1,11 +1,11 @@
-import cole from '../assets/jcole.webp'
-import drake from '../assets/drake.webp'
+import cole from '../assets/colecover.webp'
+import drake from '../assets/drakecover.webp'
 import ed from "../assets/ed.jpg";
 import tay from '../assets/dre.webp'
 import olivia from '../assets/olivia-rodrigo.webp'
 import bts from '../assets/btsA.jpeg'
 import doja from '../assets/doja.jpg'
-import ari from '../assets/lil durk.jpg'
+import ari from '../assets/durk cover.jpg'
 
 const trend = [
     {

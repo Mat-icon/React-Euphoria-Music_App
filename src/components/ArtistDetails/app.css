@@ -1,35 +1,35 @@
 .artist-d-body {
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   background: #333;
 }
 
 .artist-d-head {
-  width: 100%;
-  height: 50%;
-  background-image: url("../../assets/btsA.jpeg");
-  background-position: top;
-  filter: brightness(40%);
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 60%;
+  height: 60%;
+  filter: brightness(20%);
+  
 }
-
+.test-img{
+  width: 100%;
+  height: 100%;
+}
 .artist-d {
   position: absolute;
   left: 7%;
   font-family: "Roboto", sans-serif;
-  top: 4%;
+  top: 10%;
 }
 .artist-d-name {
-  font-size: 40px;
+  font-size: 35px;
   color: transparent;
   filter: brightness(100%);
 }
 
 .artist-d-name h1{
-  -webkit-text-stroke: 4px white;
-  letter-spacing: 3px;
+  -webkit-text-stroke: 2px white;
+  letter-spacing: 1px;
 }
 
 .artist-category h3 {
@@ -46,15 +46,23 @@
   margin-top: 10px;
 }
 .trend-container-two{
-  width: 300px;
+  width: 420px;
   height: 55px;
   padding: 8px 16px;
-  margin-top: 10px;
-  border-radius: 30px;
   cursor: pointer;
   display: flex;
-  background: linear-gradient(rgba(196, 22, 124, 0.699),rgba(216, 55, 82, 0.678));
   align-items: center;
+  border: 1px solid silver;
+}
+.song-id{
+  width: 20%;
+  height: 100%;
+  background: black;
+  
+}
+.song-id img{
+  width: 100%;
+  height: 100%;
 }
 
 .trend-container-two:hover{
@@ -64,8 +72,8 @@
 .artist-d-song{
   display: flex;
   flex-direction: column;
-  position: relative;
-  left: 5%;
+  position: absolute;
+  left: 63%;
   top: 3%;
 }
 .songs-length{
@@ -106,4 +114,54 @@
   background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.548));
   transform: translateX(-10px);
   transition: 0.3s ease-in-out;
+}
+
+.artist-btn-d button{
+  width: 160px;
+  padding: 15px 20px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgb(216, 55, 82);
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+.artist-btn-follow button{
+  width: 160px;
+  padding: 15px 20px;
+  background: none;
+  letter-spacing: 1.4px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.548));
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+.artist-btn-flex{
+  display: flex;
+  align-items: center;
+}
+.artist-about{
+  width: 160px;
+   padding: 15px 40px;
+  background: none;
+  color: white;
+  font-weight: 700;
+  border: none;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  background: linear-gradient(220deg,rgba(196, 22, 124, 0.596),rgba(216, 55, 82, 0.568),rgba(255, 217, 0, 0.548));
+  border-radius: 20px;
+}
+
+
+.artist-about:hover{
+  background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.87));
 }
