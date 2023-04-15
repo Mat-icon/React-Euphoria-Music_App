@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './app.css'
+import ArtistDetails from '../ArtistDetails/ArtistDetails'
 function ArtistData({artist, darkMode}) {
+  const [currentArtist, setCurrentArtist] = useState(null)
+
   return (
+    <>
     <a href='/artist' className='artist-card'>
         <div className='artist-item-container'>
         <div >
@@ -12,6 +16,8 @@ function ArtistData({artist, darkMode}) {
         </div>
         </div>
     </a>
+    {currentArtist && <ArtistDetails artist={artist}/>}
+    </>
   )
 }
 

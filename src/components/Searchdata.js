@@ -25,6 +25,8 @@ import bunny from '../assets/bad bunny.webp'
 import burna from '../assets/burna.jpg'
 
 
+import duacover from '../assets/duallipa cover.webp'
+import drizzy from '../assets/drakecover.webp'
 
 
 
@@ -33,12 +35,14 @@ const searchData = [
           {
              id : 1,
              name: "Drake",
-             cover_art: drake
+             cover_art: drake,
+             artist_img : drizzy
           },
           {
              id : 2,
              name: "Dua Lipa",
-             cover_art: dua
+             cover_art: dua,
+             artist_img : duacover
           },
           {
              id : 3,

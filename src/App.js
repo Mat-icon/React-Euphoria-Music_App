@@ -7,6 +7,8 @@ import Hero from "./components/HeroPage/Hero";
 import Search from "./components/SearchPage/Search";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import ArtistDetails from "./components/ArtistDetails/ArtistDetails";
+import searchData from "./components/Searchdata";
+import artistData from "./components/artistdata";
 
 function App() {
   const [played, setPlayed] = useState(false);
@@ -64,7 +66,7 @@ function App() {
             }
           />
           <Route path="/search" element={<Search handleMode={handleMode} darkMode={darkMode}/>} />
-          <Route path="/artist" element={<ArtistDetails handleMode={handleMode} darkMode={darkMode}/>} />
+          <Route path="/artist" element={<ArtistDetails handleMode={handleMode} darkMode={darkMode} artist ={artistData}/>} />
         </Routes>
       </Router>
     </>

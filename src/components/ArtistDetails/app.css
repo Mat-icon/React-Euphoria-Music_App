@@ -1,17 +1,18 @@
 .artist-d-body {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   overflow: hidden;
   background: #333;
+  padding-bottom: 1%;
 }
 
 .artist-d-head {
   width: 60%;
   height: 60%;
   filter: brightness(20%);
-  
 }
-.test-img{
+.test-img {
   width: 100%;
   height: 100%;
 }
@@ -27,7 +28,7 @@
   filter: brightness(100%);
 }
 
-.artist-d-name h1{
+.artist-d-name h1 {
   -webkit-text-stroke: 2px white;
   letter-spacing: 1px;
 }
@@ -38,70 +39,49 @@
   font-weight: 900;
 }
 
-.trend-flex-two{
+.trend-flex-two {
   display: flex;
   align-items: center;
 }
-.trend-two{
+.trend-two {
   margin-top: 10px;
 }
-.trend-container-two{
+.trend-container-two {
   width: 420px;
   height: 55px;
-  padding: 8px 16px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   border: 1px solid silver;
 }
-.song-id{
+.song-id {
   width: 20%;
   height: 100%;
   background: black;
-  
 }
-.song-id img{
+.song-id img {
   width: 100%;
   height: 100%;
 }
 
-.trend-container-two:hover{
+.trend-container-two:hover {
   transform: translateX(20px);
   transition: 0.5s ease;
 }
-.artist-d-song{
+.artist-d-song {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 63%;
-  top: 3%;
+  position: relative;
+  left: 4%;
+  top: 10%;
 }
-.songs-length{
+.songs-length {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 700;
 }
-.artistname{
-  width: 60%;
-  margin-top: 30px;
-  margin-left: 15px;
-  font-size: 14px;
-  font-weight: 400;
-  overflow: hidden;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffffea;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.subtitle{
-  font-family: 'Roboto', sans-serif;
-}
 
-.trend-play{
-  margin-left: 80px;
-}
-.artist-arrow{
+.artist-arrow {
   position: absolute;
   top: 3%;
   left: 2%;
@@ -110,13 +90,18 @@
   cursor: pointer;
 }
 
-.artist-arrow:hover{
-  background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.548));
+.artist-arrow:hover {
+  background: linear-gradient(
+    220deg,
+    rgb(196, 22, 124),
+    rgb(216, 55, 82),
+    rgba(255, 217, 0, 0.548)
+  );
   transform: translateX(-10px);
   transition: 0.3s ease-in-out;
 }
 
-.artist-btn-d button{
+.artist-btn-d button {
   width: 160px;
   padding: 15px 20px;
   background: none;
@@ -127,7 +112,7 @@
   font-weight: 700;
   letter-spacing: 1.4px;
 }
-.artist-btn-follow button{
+.artist-btn-follow button {
   width: 160px;
   padding: 15px 20px;
   background: none;
@@ -136,32 +121,179 @@
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.548));
+  background: linear-gradient(
+    220deg,
+    rgb(196, 22, 124),
+    rgb(216, 55, 82),
+    rgba(255, 217, 0, 0.548)
+  );
   align-items: center;
   display: flex;
   justify-content: center;
   font-weight: 700;
 }
-.artist-btn-flex{
+.artist-btn-flex {
   display: flex;
   align-items: center;
 }
-.artist-about{
+.artist-about {
   width: 160px;
-   padding: 15px 40px;
+  padding: 15px 40px;
   background: none;
   color: white;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   margin-left: 20px;
   font-size: 14px;
   letter-spacing: 1.4px;
   cursor: pointer;
-  background: linear-gradient(220deg,rgba(196, 22, 124, 0.596),rgba(216, 55, 82, 0.568),rgba(255, 217, 0, 0.548));
+  background: linear-gradient(
+    220deg,
+    rgba(196, 22, 124, 0.596),
+    rgba(216, 55, 82, 0.568),
+    rgba(255, 217, 0, 0.548)
+  );
   border-radius: 20px;
 }
 
+.artist-about:hover {
+  background: linear-gradient(
+    220deg,
+    rgb(196, 22, 124),
+    rgb(216, 55, 82),
+    rgba(255, 217, 0, 0.87)
+  );
+}
 
-.artist-about:hover{
-  background: linear-gradient(220deg,rgb(196, 22, 124),rgb(216, 55, 82),rgba(255, 217, 0, 0.87));
+.popular-grid {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.popular-body {
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-top: 2.5px solid rgba(192, 192, 192, 0.322);
+  border-bottom: 2.5px solid rgba(192, 192, 192, 0.322);
+  transition: 0.5s ease-in-out;
+}
+.popular-body:hover {
+  background: linear-gradient(
+    220deg,
+    rgba(196, 22, 124, 0.61),
+    rgba(216, 55, 82, 0.644)
+  );
+}
+.popular-img {
+  width: 13%;
+  height: 100%;
+  background: red;
+}
+.popular-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.popular-id {
+  margin-left: 30px;
+}
+
+.popular-body h2 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-left: 60px;
+}
+
+.popular-body span {
+  margin-left: 20px;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  font-size: 12px;
+  padding: 7px 14px;
+  color: rgba(128, 128, 128, 0.555);
+}
+.trend-play {
+  margin-left: 45px;
+  cursor: pointer;
+}
+.album {
+  position: absolute;
+  top: 5%;
+  left: 63%;
+}
+.album-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+}
+
+.album-card {
+  width: 190px;
+  height: 220px;
+ 
+  border-radius: 12px;
+  filter: brightness(60%);
+  cursor: pointer;
+  transition: 0.8s ease-out;
+}
+
+.album-card:hover {
+  filter: brightness(100%);
+}
+
+.album-s {
+  margin-top: 12px;
+}
+
+.album-img {
+  width: 100%;
+  height: 80%;
+}
+.album-img img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.album-name {
+  padding: 8px 10px;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.album-head {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.album-design{
+  position: absolute;
+  right: -10%;
+  bottom: -47.9%;
+  width: 700px;
+  height: 400px;
+  border-top-left-radius: 100%;
+  background: linear-gradient(
+    220deg,
+    rgb(196, 22, 124),
+    rgb(216, 55, 82),
+    rgba(255, 217, 0, 0.87)
+  );
+  opacity: 0.3;
+  transform: rotate(360deg);
 }
