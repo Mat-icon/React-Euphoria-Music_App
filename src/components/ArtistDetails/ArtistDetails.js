@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./app.css";
 import test from "../../assets/drakecover.webp";
-import test2 from "../../assets/drizzy.jpg";
+import test2 from "../../assets/her.jpg";
 import {
   MdArrowBackIosNew,
   MdCheck,
@@ -29,7 +29,7 @@ function ArtistDetails({artist}) {
           <h3>Artist</h3>
         </div>
         <div className="artist-d-name">
-          <h1>Drake</h1>
+          <h1>DRAKE</h1>
         </div>
         <div className="artist-btn-flex">
           <div
